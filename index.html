@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- Đường dẫn đến CKEditor -->
-    <script src="./ckeditor.js"></script>
+  <script src="./tinymce/js/tinymce/tinymce.min.js"></script>
+  <script>
+    tinymce.init({
+      selector: 'textarea',
+      plugins: 'advlist autolink lists link image charmap print preview',
+      toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image'
+    });
+  </script>
 </head>
 <body>
-    <textarea name="editor1"></textarea>
-    <script>
-        // Khởi tạo CKEditor
-        CKEDITOR.replace('editor1');
-    </script>
+  <textarea></textarea>
 </body>
 </html>
